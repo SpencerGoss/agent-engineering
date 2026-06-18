@@ -1,4 +1,4 @@
-# agent-skills
+# agent-engineering
 
 **Agent-engineering patterns and portable, prompt-only skills for LLM coding agents.**
 
@@ -66,13 +66,13 @@ break your own work), **scope discipline** (do one thing, refuse scope creep), a
 
 ```bash
 # Install a single skill into any Agent Skills-compatible host
-gh skill install SpencerGoss/agent-skills/judge-panel
-gh skill install SpencerGoss/agent-skills/code-review-session
-gh skill install SpencerGoss/agent-skills/debug-session
+gh skill install SpencerGoss/agent-engineering/judge-panel
+gh skill install SpencerGoss/agent-engineering/code-review-session
+gh skill install SpencerGoss/agent-engineering/debug-session
 # ...etc — see the table above for all 11
 
 # Inspect before installing
-gh skill preview SpencerGoss/agent-skills/judge-panel
+gh skill preview SpencerGoss/agent-engineering/judge-panel
 ```
 
 Requires `gh` CLI v2.90.0 or later. The installer auto-detects your agent host and
