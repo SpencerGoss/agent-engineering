@@ -2,6 +2,25 @@
 
 **Agent-engineering patterns and portable, prompt-only skills for LLM coding agents.**
 
+**Overview:** a working method for using AI coding agents on real projects. Work is split by its shape,
+handed to parallel agents where that helps, and every result is checked by an independent reviewer before it
+is accepted. Recurring errors become explicit rules that are enforced on later runs.
+
+```mermaid
+flowchart LR
+    T[Task] --> S{Task shape}
+    S -->|independent parts| F[Parallel agents]
+    S -->|open design question| A[Competing attempts]
+    S -->|sequential| O[Single agent]
+    F --> V[Independent reviewer<br/>re-checks the work]
+    A --> J[Judge panel<br/>selects the best]
+    V --> R[Accepted result]
+    J --> R
+    O --> R
+    R -. errors found .-> G[Rule added and<br/>enforced next run]
+    G -.-> S
+```
+
 Two things live here:
 
 1. **[Engineering patterns](#engineering-patterns)**: write-ups of the harder problems
